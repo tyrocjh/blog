@@ -1,3 +1,7 @@
-#app {
-	color: green;
+@import './reset';
+@import './header';
+@import './home';
+
+#app-main {
+	padding-top: 52px;	
 }

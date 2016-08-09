@@ -1,0 +1,10 @@
+@import './variable';
+
+body, a {
+	font-family: "Helvetica neue",Helvetica,Tahoma,"lantinghei sc","Microsoft Yahei",sans-serif;
+	color: $gray-black;
+}
+
+a:hover {
+	text-decoration: none;
+}

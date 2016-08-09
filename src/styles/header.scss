@@ -1,0 +1,36 @@
+@import './variable';
+
+#app-header {
+  position: fixed;
+  width: 100%;
+  line-height: 50px;
+  border-top: 2px solid $orange;
+  background-color: $white;
+  box-shadow: 0 0 5px rgba(0,0,0,.4);
+
+	nav {
+		ul {
+			float: left;
+			margin-bottom: 0;
+
+			li {
+				padding: 0 15px;
+
+				a {
+					font-size: 16px;
+
+					&.active, &:hover {
+						color: $orange;
+					}
+				}
+			}
+		}
+
+		> a {
+			float: right;
+			&:hover {
+				color: $orange;
+			}
+		}
+	}
+}
