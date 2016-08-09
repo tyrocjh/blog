@@ -24,6 +24,18 @@ module.exports = {
         test: /\.jsx?$/,
         loaders: ['react-hot', 'babel'],
         exclude: /node_modules/
+      },
+      {
+        test: /\.scss$/,
+        loader: 'style!css?sourceMap!sass'
+      },
+      {
+        test: /\.css$/,
+        loader: 'style!css'
+      },
+      {
+        test: /\.(ttf|eot|svg|woff|woff2)$/,
+        loader: 'url-loader?limit=8192'
       }
     ]
   },

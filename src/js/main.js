@@ -6,6 +6,9 @@ import { Router, browserHistory } from 'react-router';
 // import configureStore from './store/configureStore';
 import routes from './routes';
 
+import 'bootstrap/dist/css/bootstrap.css';
+import '../styles/main.scss';
+
 // const store = configureStore();
 
 ReactDOM.render(
