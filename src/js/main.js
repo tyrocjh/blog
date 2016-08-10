@@ -7,6 +7,7 @@ import { Router, browserHistory } from 'react-router';
 import routes from './routes';
 
 import 'bootstrap/dist/css/bootstrap.css';
+import 'font-awesome/css/font-awesome.css';
 import '../styles/main.scss';
 
 // const store = configureStore();

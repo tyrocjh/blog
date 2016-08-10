@@ -34,7 +34,7 @@ module.exports = {
         loader: 'style!css'
       },
       {
-        test: /\.(ttf|eot|svg|woff|woff2)$/,
+        test: /\.(ttf|eot|svg|woff|woff2)/,
         loader: 'url-loader?limit=8192'
       }
     ]
