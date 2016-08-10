@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import Home from '../components/Home';
 
-export default class Home extends Component {
+export default class HomeContainer extends Component {
   render() {
     return (
-      <div className="temp">home...</div>
+      <Home />
     )
   }
 }
