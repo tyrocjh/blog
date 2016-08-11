@@ -45,7 +45,7 @@ module.exports = {
   },
   plugins: plugins,
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx', '.scss']
   },
   devServer: {
     contentBase: path.resolve(__dirname, './src'),
