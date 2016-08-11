@@ -1,0 +1,110 @@
+@import './mixin';
+
+$device-dark-gray: #aaa;
+$device-gray: #d6d6d6;
+$device-black: #444;
+
+.device-container {
+	position: relative;
+  height: 175px;
+  overflow: hidden;
+  max-width: 600px;
+  margin: 25px auto 0;
+
+	.device {
+	  box-sizing: initial;
+		background-color: $device-gray;
+		position: absolute;
+		bottom: 0;
+		border-radius: 8px 8px 0 0;
+    border-color: $device-black;
+    border-style: solid;
+    border-width: 17px 4px 0;
+
+    &:before {
+			content: '';
+			display: block;
+	    height: 10px;
+	    width: 100%;
+	    background-color: #FFF;
+	    box-shadow: 0 0 2px #444;
+	    margin-bottom: 8px;
+    }
+
+    >i {
+    	background-color: $white;
+    	position: relative;
+    	height: 55px;
+    	display: block;
+    	margin: 0 3px 8px;
+
+    	&:before {
+    		content: '';
+    		background-color: $device-dark-gray;
+    		position: absolute;
+		    left: 0;
+    		height: 62%;
+    		width: 100%;
+		    display: inline-block;
+    	}
+    }
+	}
+
+	.device-mobile {
+		width: 52px;
+		height: 88px;
+		left: 5%;
+		z-index: 1;
+
+    &:after {
+    	content: '';
+    	background-color: $black;
+    	width: 3px;
+    	height: 3px;
+			position: absolute;
+	    top: -10px;
+	    left: 23px;
+    }
+
+    >i {
+    	margin-bottom: 4px;
+    }
+	}
+
+	.device-pc {
+		width: 280px;
+		height: 160px;
+		left: 50%;
+		margin-left: -150px;
+		border-width: 10px 6px 0;
+
+		>i {
+			width: 58px;
+			height: 75px;
+			display: inline-block;
+		}
+	}
+
+	.device-pad {
+		width: 105px;
+		height: 113px;
+		right: 1%;
+		border-width: 17px 6px 0;
+
+    &:after {
+    	content: '';
+    	background-color: $black;
+    	width: 3px;
+    	height: 3px;
+			position: absolute;
+	    top: -10px;
+	    left: 50px;
+    }
+
+		>i {
+			width: 44px;
+			height: 55px;
+			display: inline-block;
+		}
+	}
+}

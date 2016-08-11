@@ -1,3 +1,7 @@
+@import './variable';
+@import './mixin';
+@import './device_image';
+
 #home {
 	min-height: 800px;
 	
@@ -22,8 +26,9 @@
 		}
 	}
 
-	.about-me {
-		padding: 160px 0;
+	section.about-me {
+		position: relative;
+		padding: 25vh 0 26vh;
 		text-align: center;
 
 		>h3 {
@@ -45,13 +50,10 @@
 			border: 5px solid $white;
 			border-radius: 100%;
 			margin: 0 auto;
-			transition: all .3s ease;
-	    -moz-transition: all .3s ease;
-	    -webkit-transition: all .3s ease;
+			@include transition;
 
 			&:hover {
-				transform: rotate(200deg);
-    		-webkit-transform: rotate(200deg);
+				@include rotate($angle: 200deg);
 			}
 		}
 
@@ -68,14 +70,115 @@
 				margin: 0 10px;
 				color: $black;
 				font-size: 22px;
-				transition: all .2s ease;
-		    -moz-transition: all .2s ease;
-		    -webkit-transition: all .2s ease;
+				@include transition($duration: .2s);
 
 				&:hover {
 					opacity: 1;
 				}
 			}
+		}
+
+		&:after {
+	    content: '';
+	    position: absolute;
+	    width: 0;
+	    height: 0;
+	    bottom: 0;
+	    left: 0;
+	    border-style: solid;
+	    border-width: 5vh 50vw 0;
+	    border-color: transparent rgba(255, 255, 255, .5);
+		}
+	}
+
+	section.about-design {
+		padding: 8vh 0;
+		background-color: rgba(255, 255, 255, .5);
+		text-align: center;
+
+		>h3 {
+			font-size: 32px;
+			color: $gray-black;
+			margin-bottom: 20px;
+			letter-spacing: 5px;
+		}
+
+		>p {
+			font-size: 20px;
+			margin-bottom: 50px;
+		}
+
+		.links a {
+			padding: 0 8px;
+    	text-decoration: underline;
+
+    	&:hover {
+    		color: $orange;
+    	}
+		}
+	}
+
+	section.about-backend {
+		text-align: center;
+		padding: 20vh 0 0;
+		margin-bottom: 30vh;
+		background-color: rgba(255, 255, 255, .5);
+
+		.language {
+			.nodejs-logo {
+				background-image: url('../images/nodejs-logo.png');
+				height: 120px;
+				width: 90px;
+				margin: 0 auto 10px;
+			}
+			
+			p {
+				font-size: 40px;
+				color: $green;
+				margin-bottom: 20px;
+			}
+		}
+
+		.framework {
+			p:nth-child(1) {
+				color: $light-gray;
+				font-size: 24px;
+				margin-bottom: 12px;
+			}
+
+			p:nth-child(2) {
+				background-color: $light-gray;
+				height: 30px;
+				line-height: 30px;
+				color: $white;
+
+				>a {
+					color: $green;
+					padding-left: 8px;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+
+	section.about-links {
+		padding: 5vh 0;
+		background-color: rgba(255, 255, 255, .5);
+		text-align: center;
+
+		>a {
+			display: inline-block;
+			border: 1px solid #d3d3d3;
+			margin: 0 20px;
+			background-color: $white;
+		}
+
+		a:nth-child(1) {
+			color: $white;
+			background-color: $orange;
 		}
 	}
 }

@@ -13,6 +13,5 @@ import '../styles/main.scss';
 // const store = configureStore();
 
 ReactDOM.render(
-	<Router history={browserHistory}>{routes}</Router>,
-  document.getElementById('app')
+  <Router history={browserHistory}>{routes}</Router>, document.getElementById('app')
 );

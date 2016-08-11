@@ -2,6 +2,7 @@
 
 #app-header {
   position: fixed;
+  z-index: 100;
   width: 100%;
   line-height: 50px;
   border-top: 2px solid $orange;

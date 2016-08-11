@@ -1,0 +1,14 @@
+@mixin transition($property: all, $duration: .3s, $timing-function: ease, $delay: 0s) {
+	transition: $property $duration $timing-function $delay;
+	-moz-transition: $property $duration $timing-function $delay;
+	-webkit-transition: $property $duration $timing-function $delay;
+	-o-transition: $property $duration $timing-function $delay;
+}
+
+@mixin rotate($angle: 360deg) {
+	transform:rotate($angle);
+	-ms-transform:rotate($angle);
+	-moz-transform:rotate($angle);
+	-webkit-transform:rotate($angle);
+	-o-transform:rotate($angle);
+}
