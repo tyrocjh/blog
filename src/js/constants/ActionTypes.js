@@ -1,0 +1,2 @@
+export const REQUEST_LABS = 'REQUEST_LABS';
+export const RECEIVE_LABS = 'RECEIVE_LABS';
