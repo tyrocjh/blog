@@ -6,6 +6,14 @@ Q:
 2.webpack.config.prod.js not finished yet!!
 
 tech:
-bootstrap, react, redux, sass, webpack
+bootstrap, es6, react, redux, sass, webpack
 
-http://www.17sucai.com/category/2/47/53
+dev -> prod:
+main.js -> import './mocks/labs';
+
+todo:
+export function fetchLabsIfNeeded() {
+	return (dispatch, getState) => {
+ 		return dispatch(fetchLabs());
+ 	}
+}

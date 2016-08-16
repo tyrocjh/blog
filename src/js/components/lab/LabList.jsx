@@ -12,7 +12,11 @@ export default class LabList extends Component {
 	}
 
 	render() {
-		let labList = [1,1,1,1,1,1,1,1,1,1].map(() => <LabItem />)
+		const { labs } = this.props;
+
+		let labList = labs.datas.map((data, index) => {
+			return <LabItem key={index} lab={data} />;
+		})
 
 		return (
 			<div className="lab-list">

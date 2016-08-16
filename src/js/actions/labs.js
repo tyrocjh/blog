@@ -9,7 +9,7 @@ function requestLabs() {
 function receiveLabs(json) {
 	return {
 		type: types.RECEIVE_LABS,
-		labs: [{ a:1, b:2 }]
+		labs: json.datas
 	}
 }
 
@@ -17,7 +17,7 @@ export function fetchLabs() {
 	return dispatch => {
 		dispatch(requestLabs());
 		return (
-			fetch('labs.json', { method: 'GET' })
+			fetch('/api/labs')
 				.then(response => response.json())
 				.then(json => {
 					console.info(json);
@@ -26,9 +26,3 @@ export function fetchLabs() {
 		)
 	}
 }
-
-// export function fetchLabsIfNeeded() {
-// 	return (dispatch, getState) => {
-// 		return dispatch(fetchLabs());
-// 	}
-// }
