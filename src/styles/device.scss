@@ -1,6 +1,7 @@
 @import './mixin';
 
 $device-dark-gray: #aaa;
+$device-light-gray: #ccc;
 $device-gray: #d6d6d6;
 $device-black: #444;
 
@@ -107,4 +108,35 @@ $device-black: #444;
 			display: inline-block;
 		}
 	}
+}
+
+.device-mac {
+	width: 240px;
+	height: 120px;
+  border-width: 6px 6px 8px;
+  border-style: solid;
+  border-radius: 10px 10px 0 0;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+
+  >div {
+    margin: 8px 0;
+
+    >i {
+    	font-size: 60px;
+    }
+  }
+
+  &:after {
+  	content: '';
+  	width: 300px;
+  	height: 6px;
+  	background: $device-light-gray;
+  	display: block;
+    position: absolute;
+    bottom: -13px;
+    left: -38px;
+    border-radius: 0 0 40px 40px / 0 0 5px 5px;
+  }
 }
