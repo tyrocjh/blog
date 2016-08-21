@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import { fetchLabs } from '../../actions/labs';
-
 import LabItem from './LabItem';
 
 export default class LabList extends Component {

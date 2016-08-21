@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Masonry from 'react-masonry-component';
 
 import BlogItem from './BlogItem';
 
@@ -9,7 +10,13 @@ export default class BlogList extends Component {
 		return (
 			<section className="blog-list">
 				<div className="container">
-					{bloglist}
+          <Masonry
+            className={'row'}
+            elementType={'div'}
+            disableImagesLoaded={false}
+            updateOnEachImageLoad={false} >
+            {bloglist}
+          </Masonry>
 				</div>
 			</section>
 		)

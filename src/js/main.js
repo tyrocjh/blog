@@ -11,6 +11,8 @@ import 'font-awesome/css/font-awesome.css';
 import '../styles/main.scss';
 
 import './mocks/labs';
+import './mocks/blogs';
+import './mocks/blogTags';
 
 const store = configureStore();
 

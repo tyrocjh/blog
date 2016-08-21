@@ -20,7 +20,6 @@ export function fetchLabs() {
 			fetch('/api/labs')
 				.then(response => response.json())
 				.then(json => {
-					console.info(json);
 					dispatch(receiveLabs(json))
 				})
 		)
