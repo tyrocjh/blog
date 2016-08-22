@@ -13,7 +13,7 @@ export default function(InnerComponent, getTriggerHeight) {
 		}
 
 		componentWillUnmount() {
-			window.addEventListener('scroll', this.onScroll, false);
+			window.removeEventListener('scroll', this.onScroll, false);
 		}
 
 		onScroll() {
