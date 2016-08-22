@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Masonry from 'react-masonry-component';
 
-import lazyLoad from '../LazyLoad';
 import { fetchBlogsIfNeeded } from '../../actions/blogs';
 import BlogItem from './BlogItem';
+import lazyLoad from '../LazyLoad';
+import Spinner from '../loading/Spinner';
 
 class BlogList extends Component {
 	constructor(props) {
@@ -31,6 +32,7 @@ class BlogList extends Component {
             updateOnEachImageLoad={false} >
             {blogList}
           </Masonry>
+          { blogs.isFetching ? <Spinner /> : null }
 				</div>
 			</section>
 		)

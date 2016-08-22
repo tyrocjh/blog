@@ -16,6 +16,7 @@ function receiveBlogs(json) {
 function fetchBlogs() {
 	return dispatch => {
 		dispatch(requestBlogs());
+
 		return (
 			fetch('/api/blogs')
 				.then(response => response.json())

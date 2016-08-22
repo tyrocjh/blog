@@ -20,3 +20,27 @@
 	-webkit-transform: scale($scale);
 	-o-transform: scale($scale);
 }
+
+@mixin spin($duration: 1s) {
+	@keyframes spin {
+	  from {transform:rotate(0deg);}
+	  to {transform:rotate(360deg);}
+	}
+	@-moz-keyframes spin {
+	  from { -moz-transform: rotate(0deg); }
+	  to { -moz-transform: rotate(360deg); }
+	}
+	@-webkit-keyframes spin {
+	  from { -webkit-transform: rotate(0deg); }
+	  to { -webkit-transform: rotate(360deg); }
+	}
+	@-o-keyframes spin {
+	  from {transform:rotate(0deg);}
+	  to {transform:rotate(360deg);}
+	}
+
+	animation: spin $duration infinite;
+	-moz-animation: spin $duration infinite;
+	-webkit-animation: spin $duration infinite;
+	-o-animation: spin $duration infinite;	
+}
