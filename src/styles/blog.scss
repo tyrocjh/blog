@@ -84,6 +84,9 @@
 
     	>a {
     		display: inline-block;
+		    &.bg {
+  				background: url('../images/blog-card-default-bg.jpg') no-repeat;
+  			}
 
     		>img {
     			max-width: 100%;
@@ -113,7 +116,7 @@
 		    	padding-left: 10px;
 		    	font-size: 13px;
 		    	display: table-cell;
-		    	width: 75%;
+		    	width: 74%;
 
 		    	>strong {
 				    color: $dark-gray;

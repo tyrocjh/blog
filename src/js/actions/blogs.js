@@ -20,7 +20,6 @@ export function fetchBlogs() {
 			fetch('/api/blogs')
 				.then(response => response.json())
 				.then(json => {
-					console.info(json);
 					dispatch(receiveBlogs(json));
 				})
 		)

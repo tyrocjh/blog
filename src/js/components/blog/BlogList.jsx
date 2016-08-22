@@ -1,11 +1,24 @@
 import React, { Component } from 'react';
 import Masonry from 'react-masonry-component';
 
+import { fetchBlogs } from '../../actions/blogs';
 import BlogItem from './BlogItem';
 
 export default class BlogList extends Component {
+	constructor(props) {
+		super(props);
+		const { dispatch } = props;
+		dispatch(fetchBlogs());
+	}
+
 	render() {
-		let bloglist = [1,1,1,1,1,1,1].map( () => <BlogItem /> );
+		const { blogs } = this.props;
+
+		let blogList = blogs.datas.map((data, index) => {
+			return (
+				<BlogItem key={index} blog={data} />
+			)
+		});
 
 		return (
 			<section className="blog-list">
@@ -15,7 +28,7 @@ export default class BlogList extends Component {
             elementType={'div'}
             disableImagesLoaded={false}
             updateOnEachImageLoad={false} >
-            {bloglist}
+            {blogList}
           </Masonry>
 				</div>
 			</section>

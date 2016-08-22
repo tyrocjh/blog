@@ -13,7 +13,7 @@ class BlogContainer extends Component {
 					<DeviceMac />
 				</header>
 				<BlogTags {...this.props} />
-				<BlogList />
+				<BlogList {...this.props} />
 			</div>
 		)
 	}
