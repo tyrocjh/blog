@@ -20,7 +20,6 @@ export function fetchBlogTags() {
 			fetch('/api/blogTags')
 				.then(response => response.json())
 				.then(json => {
-					console.info(json);
 					dispatch(receiveBlogTags(json));
 				})
 		)

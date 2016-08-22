@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import Masonry from 'react-masonry-component';
 
-import { fetchBlogs } from '../../actions/blogs';
+import lazyLoad from '../LazyLoad';
+import { fetchBlogsIfNeeded } from '../../actions/blogs';
 import BlogItem from './BlogItem';
 
-export default class BlogList extends Component {
+class BlogList extends Component {
 	constructor(props) {
 		super(props);
-		const { dispatch } = props;
-		dispatch(fetchBlogs());
+		const { dispatch, blogs } = props;
+		dispatch(fetchBlogsIfNeeded(blogs));
 	}
 
 	render() {
@@ -35,3 +36,17 @@ export default class BlogList extends Component {
 		)
 	}
 }
+
+function getTriggerHeight() {
+	let blogListSelector = document.querySelector('.blog-list');
+
+	let appFooterSelector = document.querySelector('#app-footer');
+
+	return blogListSelector.offsetHeight - appFooterSelector.offsetHeight;
+}
+
+function triggerFunction() {
+	return fetchBlogsIfNeeded;
+}
+
+export default lazyLoad(BlogList, getTriggerHeight, triggerFunction());

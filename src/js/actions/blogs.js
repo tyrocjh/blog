@@ -13,7 +13,7 @@ function receiveBlogs(json) {
 	}
 }
 
-export function fetchBlogs() {
+function fetchBlogs() {
 	return dispatch => {
 		dispatch(requestBlogs());
 		return (
@@ -24,4 +24,11 @@ export function fetchBlogs() {
 				})
 		)
 	}
+}
+
+export function fetchBlogsIfNeeded(blogs) {
+	return dispatch => {
+		if(!blogs.isFetching)
+ 			return dispatch(fetchBlogs());
+ 	}
 }

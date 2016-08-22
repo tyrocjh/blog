@@ -31,7 +31,7 @@ class BlogTags extends Component {
 }
 
 function getScrollHeight() {
-	var selector = document.querySelector('.blog-page header');
+	let selector = document.querySelector('.blog-page header');
 
 	return selector.offsetHeight;
 }

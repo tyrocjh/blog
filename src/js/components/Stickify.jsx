@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default function(InnerComponent, getScrollHeight) {
+export default function(InnerComponent, getTriggerHeight) {
 	class StickyComponent extends Component {
 		constructor(props) {
 			super(props);
@@ -17,9 +17,9 @@ export default function(InnerComponent, getScrollHeight) {
 		}
 
 		onScroll() {
-			if(window.scrollY >= getScrollHeight() && !this.state.sticky) {
+			if(window.scrollY >= getTriggerHeight() && !this.state.sticky) {
 				this.setState({sticky: true});
-			} else if(window.scrollY < getScrollHeight() && this.state.sticky) {
+			} else if(window.scrollY < getTriggerHeight() && this.state.sticky) {
 				this.setState({sticky: false});
 			}
 		}
