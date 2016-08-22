@@ -12,6 +12,7 @@ dev -> prod:
 main.js -> import './mocks/labs';
 
 todo:
+0.header link /// detail page???
 1.react-masonry-component
 2.export function fetchLabsIfNeeded() {
 	return (dispatch, getState) => {
