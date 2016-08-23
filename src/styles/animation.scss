@@ -49,6 +49,6 @@
 .page-transition-leave {
 	@include fadeOutRight($duration: 1s);
 }
-.page-transition-leave.page-transition-leave-active {
-	@include fadeOutRight($duration: 1s);
+.page-transition-enter {
+	@include fadeInLeft($duration: 1s);
 }

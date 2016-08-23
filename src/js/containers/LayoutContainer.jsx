@@ -10,12 +10,12 @@ export default class Layout extends Component {
     return (
 	  <div>
 	    <HeaderContainer />
-		<div id="app-main">
-          <ReactCSSTransitionGroup component="div" transitionName="page-transition" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
-            {React.cloneElement(this.props.children, { key: location.pathname })}
-          </ReactCSSTransitionGroup>
-		</div>
-        <ToolbarContainer />
+  		<div id="app-main">
+        <ReactCSSTransitionGroup component="div" transitionName="page-transition" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
+          {React.cloneElement(this.props.children, { key: location.pathname })}
+        </ReactCSSTransitionGroup>
+  		</div>
+      <ToolbarContainer />
 	    <FooterContainer />
 	  </div>
     )
