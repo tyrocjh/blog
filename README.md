@@ -12,10 +12,16 @@ dev -> prod:
 main.js -> import './mocks/labs';
 
 todo:
-0.header link /// detail page???
-1.react-masonry-component
-2.export function fetchLabsIfNeeded() {
+0.detail page
+1.mobile
+2.react-masonry-component
+3.export function fetchLabsIfNeeded() {
 	return (dispatch, getState) => {
  		return dispatch(fetchLabs());
  	}
 }
+
+layoutcontainer.jsx
+animation.scss
+https://facebook.github.io/react/docs/animation.html
+https://g.xsec.io/

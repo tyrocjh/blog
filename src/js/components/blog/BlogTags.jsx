@@ -6,8 +6,9 @@ import stickify from '../Stickify';
 class BlogTags extends Component {
 	constructor(props) {
 		super(props);
-		const { dispatch } = this.props;
-		dispatch(fetchBlogTags());
+		const { dispatch, blogTags } = this.props;
+		if(blogTags.datas.length === 0)
+			dispatch(fetchBlogTags());
 	}
 
 	render() {

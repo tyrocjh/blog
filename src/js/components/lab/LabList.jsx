@@ -6,8 +6,9 @@ import LabItem from './LabItem';
 export default class LabList extends Component {
 	constructor(props) {
 		super(props);
-		const { dispatch } = this.props;
-		dispatch(fetchLabs())
+		const { dispatch, labs } = this.props;
+		if(labs.datas.length === 0)
+			dispatch(fetchLabs());
 	}
 
 	render() {

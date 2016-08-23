@@ -10,7 +10,8 @@ class BlogList extends Component {
 	constructor(props) {
 		super(props);
 		const { dispatch, blogs } = props;
-		dispatch(fetchBlogsIfNeeded(blogs));
+		if(blogs.datas.length === 0)
+			dispatch(fetchBlogsIfNeeded(blogs));
 	}
 
 	render() {
