@@ -21,3 +21,5 @@ todo:
  		return dispatch(fetchLabs());
  	}
 }
+
+纯静态项目打包（cdn？）+react、nodejs后台项目
