@@ -13,6 +13,7 @@ export default (
 			<IndexRoute component={HomeContainer} />
 			<Route path="labs" component={LabContainer} />
 			<Route path="blog" component={BlogContainer} />
+			<Route path="blog/:id" component={BlogContainer} />
 		</Route>
 		<Route path="*" component={NotFound} status={404} />
 	</Router>

@@ -13,6 +13,7 @@ import '../styles/main.scss';
 import './mocks/labs';
 import './mocks/blogs';
 import './mocks/blogTags';
+import './mocks/blogArticle';
 
 const store = configureStore();
 

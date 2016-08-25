@@ -15,11 +15,7 @@ main.js -> import './mocks/labs';
 todo:
 0.detail page
 1.mobile
-2.react-masonry-component
-3.export function fetchLabsIfNeeded() {
-	return (dispatch, getState) => {
- 		return dispatch(fetchLabs());
- 	}
-}
+2.react-masonry-component source code
+
 
 纯静态项目打包（cdn？）+react、nodejs后台项目
