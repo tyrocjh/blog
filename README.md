@@ -13,9 +13,11 @@ dev -> prod:
 main.js -> import './mocks/labs';
 
 todo:
-0.detail page
-1.mobile
-2.react-masonry-component source code
+1.article comment
+2.comment page
+3.mobile
+4.share button
+5.react-masonry-component source code
 
 
 纯静态项目打包（cdn？）+react、nodejs后台项目

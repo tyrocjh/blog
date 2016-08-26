@@ -141,3 +141,84 @@
 		}
 	}
 }
+
+.blog-article-page {
+	header {
+		background: url('../images/mask.png');
+		text-align: center;
+    padding: 80px 0 128px;
+
+		h1 {
+			color: $gray-black;
+			font-size: 32px;
+		}
+
+		p {
+			color: $gray-black;
+			font-size: 16px;
+			padding: 20px 0 35px;
+	    opacity: .7;
+		}
+
+		.share-btn {
+			a {
+			  margin: 0 .5em;
+    		border-radius: 2px;
+    		width: 88px;
+    		height: 32px;
+    		display: inline-block;
+			}
+			.weibo {
+				background-color: $orange;
+				box-shadow: 0 1px 2px rgba(0,0,0,.1);
+			}
+			.twitter {
+				background-color: $white;
+				box-shadow: 0 1px 2px rgba(0,0,0,.1);
+			}
+		}
+	}
+
+	.article-section {
+		padding-bottom: 50px;
+		background-color: #ddd;
+
+		article {
+		  background-color: $white;
+    	margin-top: -2em;
+    	padding: 40px 20px 50px;
+		}
+
+		footer {
+			background-color: $deep-white;
+			padding: 10px 20px 10px;
+
+			p {
+			  color: #666;
+			}
+		}
+	}
+
+	.comment-section {
+		height: 300px;
+		background-color: #ccc;
+		position: relative;
+
+		&:before {
+	    content: '';
+	    display: block;
+	    border-style: solid;
+	    border-width: 15px 55px;
+	    border-color: transparent;
+	    border-bottom-color: #ccc;
+	    width: 0;
+	    height: 0;
+	    position: absolute;
+	    top: -30px;
+	    margin-left: auto;
+	    margin-right: auto;
+	    left: 0;
+	    right: 0;
+		}
+	}
+}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import moment from 'moment';
 
 export default class BlogItem extends Component {
@@ -14,11 +15,11 @@ export default class BlogItem extends Component {
 		return (
 			<div className="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 				<div className="blog-item">
-					<a href="#" className={`${(blog.cover ? '' : 'bg')}`}>
+					<Link to="/blog/test" href="#" className={`${(blog.cover ? '' : 'bg')}`}>
 						<img src={blog.cover} />
 						<h3 className="title">{blog.title}</h3>
 						<p className="intro">{blog.intro}</p>
-					</a>
+					</Link>
 					<footer>
 						<div className="tags">
 							<strong>tags</strong>
