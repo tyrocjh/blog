@@ -1,0 +1,46 @@
+@import './variable';
+@import './mixin';
+
+.friendship {
+	background-color: #fafffa;
+
+	header {
+		padding-bottom: 75px;
+	 	@include linear-gradient();
+
+	 	.nav {
+	 		a {
+	 			color: $white;
+	 		}
+	 	}
+
+	 	.info {
+	 		text-align: center;
+
+	 		h1 {
+	 			color: $white;
+	 			padding: 90px 0 25px;
+	 			letter-spacing: 10px;
+	 		}
+
+	 		a {
+	 			display: inline-block;
+	 			background-color: $white;
+	 			width: 115px;
+	 			height: 40px;
+	 			line-height: 40px;
+	 			margin: 20px 0 20px;
+	 			border-radius: 5px;
+
+	 			&:hover {
+	 				background-color: $orange;
+	 				color: $white;
+	 			}
+	 		}
+	 	}
+	}
+
+	.friends {
+		
+	}
+}

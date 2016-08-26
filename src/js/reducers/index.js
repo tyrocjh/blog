@@ -3,12 +3,14 @@ import labs from './labs';
 import blogs from './blogs';
 import blogTags from './blogTags';
 import blogArticle from './blogArticle';
+import friendship from './friendship';
 
 const rootReducer = combineReducers({
 	labs,
 	blogs,
 	blogTags,
-	blogArticle
+	blogArticle,
+	friendship
 });
 
 export default rootReducer;

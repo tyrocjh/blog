@@ -1,24 +1,24 @@
 @mixin transition($property: all, $duration: .3s, $timing-function: ease, $delay: 0s) {
-	transition: $property $duration $timing-function $delay;
-	-moz-transition: $property $duration $timing-function $delay;
 	-webkit-transition: $property $duration $timing-function $delay;
+	-moz-transition: $property $duration $timing-function $delay;
 	-o-transition: $property $duration $timing-function $delay;
+	transition: $property $duration $timing-function $delay;
 }
 
 @mixin rotate($angle: 360deg) {
-	transform: rotate($angle);
-	-ms-transform: rotate($angle);
-	-moz-transform: rotate($angle);
 	-webkit-transform: rotate($angle);
+	-moz-transform: rotate($angle);
 	-o-transform: rotate($angle);
+	-ms-transform: rotate($angle);
+	transform: rotate($angle);
 }
 
 @mixin scale($scale: 1) {
-	transform: scale($scale);
-	-ms-transform: scale($scale);
-	-moz-transform: scale($scale);
 	-webkit-transform: scale($scale);
+	-moz-transform: scale($scale);
 	-o-transform: scale($scale);
+	-ms-transform: scale($scale);
+	transform: scale($scale);
 }
 
 @mixin spin($duration: 1s) {
@@ -39,8 +39,15 @@
 	  to {transform:rotate(360deg);}
 	}
 
-	animation: spin $duration infinite;
-	-moz-animation: spin $duration infinite;
 	-webkit-animation: spin $duration infinite;
-	-o-animation: spin $duration infinite;	
+	-moz-animation: spin $duration infinite;
+	-o-animation: spin $duration infinite;
+	animation: spin $duration infinite;
+}
+
+@mixin linear-gradient($start: #336799, $end: #64cccb) {
+	background: -webkit-linear-gradient($start, $end);
+  background: -moz-linear-gradient($start, $end);
+  background: -o-linear-gradient($start, $end);
+  background: linear-gradient($start, $end);
 }

@@ -16,7 +16,7 @@ export default class Header extends Component {
 						<li><Link to="/labs" className={ isCurPath('/labs') }>实验室</Link></li>
 						<li><Link to="/bless" className={ isCurPath('/bless') }>留言</Link></li>
 					</ul>
-					<Link to="/">前端英雄榜</Link>
+					<Link to="/directories" target="_blank">前端英雄榜</Link>
 				</nav>
       </header>
 		)

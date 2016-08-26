@@ -5,6 +5,7 @@ import LayoutContainer from './containers/LayoutContainer';
 import HomeContainer from './containers/HomeContainer';
 import LabContainer from './containers/LabContainer';
 import BlogContainer from './containers/BlogContainer';
+import FriendshipContainer from './containers/FriendshipContainer';
 import NotFound from './components/NotFound';
 
 export default (
@@ -15,6 +16,7 @@ export default (
 			<Route path="blog" component={BlogContainer} />
 			<Route path="blog/:id" component={BlogContainer} />
 		</Route>
+		<Route path="/directories" component={FriendshipContainer} />
 		<Route path="*" component={NotFound} status={404} />
 	</Router>
 );

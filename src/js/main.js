@@ -14,6 +14,7 @@ import './mocks/labs';
 import './mocks/blogs';
 import './mocks/blogTags';
 import './mocks/blogArticle';
+import './mocks/friendship';
 
 const store = configureStore();
 
