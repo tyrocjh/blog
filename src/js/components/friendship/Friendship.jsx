@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import FriendshipItem from './FriendshipItem';
 import { fetchFriends } from '../../actions/friendship';
 
 export default class Friendship extends Component {
@@ -12,7 +13,7 @@ export default class Friendship extends Component {
 
 	friendsList(friends) {
 		return friends.map(friend => {
-			return <div>{friend.name}</div>
+			return <FriendshipItem friend={friend} />
 		});
 	}
 
