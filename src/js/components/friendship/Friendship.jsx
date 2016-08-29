@@ -12,8 +12,8 @@ export default class Friendship extends Component {
 	}
 
 	friendsList(friends) {
-		return friends.map(friend => {
-			return <FriendshipItem friend={friend} />
+		return friends.map((friend, index) => {
+			return <FriendshipItem key={index} friend={friend} />
 		});
 	}
 
@@ -35,7 +35,9 @@ export default class Friendship extends Component {
 				</header>
 
 				<section className="friends container">
-					{this.friendsList(friendship.datas)}
+					<div className="row">
+						{this.friendsList(friendship.datas)}
+					</div>
 				</section>
 			</div>
 		)

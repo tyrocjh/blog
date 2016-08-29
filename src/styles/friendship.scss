@@ -41,9 +41,67 @@
 	}
 
 	.friends {
+		margin-top: 20px;
+
 		.card {
-			// width: 385px;
-			height: 170px;
+			background-color: white;
+			padding: 15px 20px 10px 16px;
+			margin-bottom: 20px;
+			box-shadow: 0 2px 5px #ced2db;
+			@include transition($duration: .5s, $timing-function: linear);
+
+			&:hover {
+				box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+			}
+
+			p {
+				font-size: 13px;
+				color: $gray;
+				height: 60px;
+				margin: 10px 0 5px;
+			}
+
+			.name {
+				img {
+					width: 45px;
+					height: 45px;
+					border-radius: 50%;
+					margin-right: 32px;
+				}
+
+				span {
+					font-size: 18px;
+				}
+			}
+
+			.links {
+				a {
+					width: 26px;
+			    height: 26px;
+			    line-height: 26px;
+			    display: inline-block;
+			    color: $white;
+			    background-color: #008000;
+			    text-align: center;
+			    border-radius: 50%;
+			    box-shadow: 0 0 1px #ccc;
+			    @include transition($duration: .3s);
+
+			    &:hover {
+			    	color: $black;
+			    	background-color: $white;
+			    }
+				}
+
+				a:not(:first-child) {
+					background-color: #00ae50;
+					margin-left: 10px;
+
+					&:hover {
+			    	background-color: $white;
+			    }
+				}
+			}
 		}
 	}
 }
