@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
 import FriendshipItem from './FriendshipItem';
+import Modal from '../modal/Modal';
+import { showModal } from '../../actions/modal';
 import { fetchFriends } from '../../actions/friendship';
 
 export default class Friendship extends Component {
@@ -17,8 +19,12 @@ export default class Friendship extends Component {
 		});
 	}
 
+	handleClick(dispatch) {
+		dispatch(showModal('FriendModal', {}));
+	}
+
 	render() {
-		const { friendship } = this.props;
+		const { friendship, modal, dispatch } = this.props;
 
 		return (
 			<div className="friendship">
@@ -29,7 +35,7 @@ export default class Friendship extends Component {
 						</div>
 						<div className="info">
 							<h1>前端英雄榜</h1>
-							<a href="javascript:void(0);">我要上榜</a>
+							<a onClick={this.handleClick.bind(this, dispatch)}>我要上榜</a>
 						</div>
 					</div>
 				</header>
@@ -39,6 +45,8 @@ export default class Friendship extends Component {
 						{this.friendsList(friendship.datas)}
 					</div>
 				</section>
+
+				<Modal {...modal} />
 			</div>
 		)
 	}

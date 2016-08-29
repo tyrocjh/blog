@@ -12,10 +12,11 @@ class FriendshipContainer extends Component {
 }
 
 function mapStateToProps(state) {
-	const { friendship } = state;
+	const { friendship, modal } = state;
 
 	return {
-		friendship
+		friendship,
+		modal
 	}
 }
 

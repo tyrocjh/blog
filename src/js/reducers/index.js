@@ -4,13 +4,15 @@ import blogs from './blogs';
 import blogTags from './blogTags';
 import blogArticle from './blogArticle';
 import friendship from './friendship';
+import modal from './modal';
 
 const rootReducer = combineReducers({
 	labs,
 	blogs,
 	blogTags,
 	blogArticle,
-	friendship
+	friendship,
+	modal
 });
 
 export default rootReducer;
