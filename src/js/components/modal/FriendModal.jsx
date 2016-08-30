@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import Modal from 'react-modal';
 
 export default class FriendModal extends Component {
-	openModal() {
-		this.setState({modalIsOpen: true});
+	constructor(props) {
+		super(props);
+		this.state = {modalIsOpen: true};
 	}
 
   closeModal() {
-    this.setState({modalIsOpen: false});
+		this.setState({modalIsOpen: false});
+		this.props.closeModal();
   }
 
   handleSubmit() {

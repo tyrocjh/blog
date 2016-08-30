@@ -4,6 +4,10 @@
 .friendship {
 	background-color: #fafffa;
 
+	&.ui-blur {
+		-webkit-filter: blur(2px);
+	}
+
 	header {
 		padding-bottom: 75px;
 	 	@include linear-gradient();

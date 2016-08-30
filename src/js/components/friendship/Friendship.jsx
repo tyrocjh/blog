@@ -20,14 +20,14 @@ export default class Friendship extends Component {
 	}
 
 	handleClick(dispatch) {
-		dispatch(showModal('FriendModal', {}));
+		dispatch(showModal('FRIEND', {}));
 	}
 
 	render() {
 		const { friendship, modal, dispatch } = this.props;
 
 		return (
-			<div className="friendship">
+			<div className={`friendship ${(!!modal.modalType ? 'ui-blur' : '')}`}>
 				<header>
 					<div className="container">
 						<div className="nav">
@@ -46,7 +46,7 @@ export default class Friendship extends Component {
 					</div>
 				</section>
 
-				<Modal {...modal} />
+				<Modal {...modal} dispatch={dispatch} />
 			</div>
 		)
 	}
