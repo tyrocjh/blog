@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 
+import Comment from '../comment/Comment';
 import { fetchBlogArticle } from '../../actions/blogArticle';
 
 export default class BlogArticle extends Component {
@@ -21,6 +22,7 @@ export default class BlogArticle extends Component {
 	}
 
 	render() {
+		const { modal, dispatch } = this.props;
 		const article = this.props.blogArticle.data;
 
 		return (
@@ -47,6 +49,9 @@ export default class BlogArticle extends Component {
 				</section>
 
 				<section className="comment-section">
+					<div className="container">
+						<Comment modal={modal} dispatch={dispatch}  />
+					</div>
 				</section>
 			</div>
 		)

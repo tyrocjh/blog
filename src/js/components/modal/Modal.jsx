@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import FriendModal from './FriendModal';
+import CommentUserModal from './CommentUserModal';
 import { hideModal } from '../../actions/modal';
 
 const MODAL_COMPONENTS = {
   'FRIEND': FriendModal,
+  'COMMENT-USER': CommentUserModal
 }
 
 export default class Modal extends Component {
