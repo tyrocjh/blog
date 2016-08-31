@@ -23,8 +23,9 @@ todo:
 纯静态项目打包（cdn？）+react、nodejs后台项目
 
 
+https://github.com/allan2coder/React-SPA
+
 emoji:
 https://github.com/missive/emoji-mart
 https://github.com/tommoor/emojione-picker
-https://github.com/conorhastings/react-emoji-react
 https://github.com/draft-js-plugins/draft-js-plugins
