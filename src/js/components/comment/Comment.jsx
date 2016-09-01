@@ -5,12 +5,12 @@ import CommentList from './CommentList';
 
 export default class Comment extends Component {
 	render() {
-		const { modal, dispatch } = this.props;
+		const { comment, modal, dispatch } = this.props;
 
 		return (
 			<div className="comment">
 				<CommentSendBox modal={modal} dispatch={dispatch} />
-				<CommentList />
+				<CommentList comment={comment} dispatch={dispatch} />
 			</div>
 		)
 	}

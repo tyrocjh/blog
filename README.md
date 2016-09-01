@@ -1,5 +1,5 @@
 # blog-demo
-from：http://bh-lay.com/
+reference：http://bh-lay.com/
 
 Q:
 1.page-transition-leave无效果
@@ -17,15 +17,8 @@ todo:
 2.comment page
 3.mobile
 4.share button
-5.react-masonry-component source code
+5.emoji
+6.react-masonry-component source code
 
 
 纯静态项目打包（cdn？）+react、nodejs后台项目
-
-
-https://github.com/allan2coder/React-SPA
-
-emoji:
-https://github.com/missive/emoji-mart
-https://github.com/tommoor/emojione-picker
-https://github.com/draft-js-plugins/draft-js-plugins
