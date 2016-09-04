@@ -12,11 +12,10 @@ export default class CommentList extends Component {
 	}
 
 	render() {
-		const { comment } = this.props;
-		console.info(comment);
+		const { comment, modal, dispatch } = this.props;
 
 		let commentList = comment.datas.map((comment, index) => {
-			return <CommentItem key={index} comment={comment} />
+			return <CommentItem key={index} comment={comment} modal={modal} dispatch={dispatch} />
 		});
 
 		return (

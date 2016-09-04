@@ -4,7 +4,6 @@ import Modal from '../modal/Modal';
 import { showModal } from '../../actions/modal';
 
 export default class CommentSendBox extends Component {
-
 	constructor(props) {
 		super(props);
 		this.state = { enableBox: false };
