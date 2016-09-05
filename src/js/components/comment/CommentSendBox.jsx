@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import Modal from '../modal/Modal';
 import { showModal } from '../../actions/modal';
 
 export default class CommentSendBox extends Component {
@@ -10,7 +9,7 @@ export default class CommentSendBox extends Component {
 	}
 
 	handleClick(dispatch) {
-		dispatch(showModal('COMMENT-USER', {}));
+		this.props.showModal(dispatch, showModal('COMMENT-USER', {}));
 	}
 
 	handleFocus() {
@@ -24,7 +23,7 @@ export default class CommentSendBox extends Component {
 	}
 
 	render() {
-		const { modal, dispatch } = this.props;
+		const { dispatch } = this.props;
 
 		return (
 			<div className="comment-send-box">
@@ -42,8 +41,6 @@ export default class CommentSendBox extends Component {
 						<a href="javascript:void(0)" className="send">发布</a>
 					</div>
 				</div>
-
-				<Modal {...modal} dispatch={dispatch} />
 			</div>
 		)
 	}

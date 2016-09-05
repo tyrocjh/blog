@@ -3,11 +3,13 @@ import { connect } from 'react-redux';
 
 import FriendModal from './FriendModal';
 import CommentUserModal from './CommentUserModal';
+import CommentReplyModal from './CommentReplyModal';
 import { hideModal } from '../../actions/modal';
 
 const MODAL_COMPONENTS = {
   'FRIEND': FriendModal,
-  'COMMENT-USER': CommentUserModal
+  'COMMENT-USER': CommentUserModal,
+  'COMMENT-REPLY': CommentReplyModal
 }
 
 export default class Modal extends Component {
@@ -17,13 +19,13 @@ export default class Modal extends Component {
 	}
 
 	render() {
-		const { modalType } = this.props;
+		const { modalType, modalProps, dispatch } = this.props;
 
 		if(!modalType) {
 			return null;
 		}
 
 		const SpecificModal = MODAL_COMPONENTS[modalType];
-		return <SpecificModal closeModal={this.closeModal.bind(this)} />
+		return <SpecificModal closeModal={this.closeModal.bind(this)} modalProps={modalProps} dispatch={dispatch} />
 	}
 }

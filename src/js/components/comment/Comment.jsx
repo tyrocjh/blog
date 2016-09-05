@@ -6,8 +6,8 @@ import Modal from '../modal/Modal';
 import { showModal } from '../../actions/modal';
 
 export default class Comment extends Component {
-	handleClick(dispatch) {
-		dispatch(showModal('COMMENT-USER', {}));
+	showModal(dispatch, action) {
+		dispatch(action);
 	}
 
 	render() {
@@ -15,8 +15,8 @@ export default class Comment extends Component {
 
 		return (
 			<div className="comment">
-				<CommentSendBox modal={modal} dispatch={dispatch} />
-				<CommentList comment={comment} modal={modal} dispatch={dispatch} />
+				<CommentSendBox showModal={this.showModal} dispatch={dispatch} />
+				<CommentList showModal={this.showModal} comment={comment} dispatch={dispatch} />
 				<Modal {...modal} dispatch={dispatch} />
 			</div>
 		)
