@@ -1,19 +1,29 @@
-import * as types from '../constants/ActionTypes';
+import {
+	REQUEST_COMMENT,
+	RECEIVE_COMMENT,
+	COMMENT_PAGE } from '../constants/ActionTypes';
+
+export function selectCommentPage(page) {
+	return {
+		type: COMMENT_PAGE,
+		page
+	}
+}
 
 function requestComment() {
 	return {
-		type: types.REQUEST_COMMENT
+		type: REQUEST_COMMENT
 	}
 }
 
 function receiveComment(json) {
 	return {
-		type: types.RECEIVE_COMMENT,
+		type: RECEIVE_COMMENT,
 		comment: json.datas
 	}
 }
 
-export function fetchComment() {
+function fetchComment() {
 	return dispatch => {
 		dispatch(requestComment());
 		return (
@@ -24,4 +34,27 @@ export function fetchComment() {
 				})
 		)
 	}
+}
+
+function shouldFetchComment(state, page) {
+	console.info(state);
+	const comment = state.commentByPage[page];
+
+	if(comment.isFetching) {
+		return false;
+	}
+
+	if(!comment) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+export function fetchCommentIfNeeded(page) {
+	return (dispatch, getState) => {
+		if(shouldFetchComment(getState(), page)) {
+			return dispatch(fetchComment(page));
+		}
+	};
 }

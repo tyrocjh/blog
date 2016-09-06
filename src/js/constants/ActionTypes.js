@@ -15,6 +15,7 @@ export const RECEIVE_FRIENDS = 'RECEIVE_FRIENDS';
 
 export const REQUEST_COMMENT = 'REQUEST_COMMENT';
 export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
+export const COMMENT_PAGE = 'COMMENT_PAGE';
 
 export const SHOW_MODAL = 'SHOW_MODAL';
 export const HIDE_MODAL = 'HIDE_MODAL';

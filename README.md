@@ -22,3 +22,5 @@ todo:
 
 
 纯静态项目打包（cdn？）+react、nodejs后台项目
+
+https://github.com/cloudmu/react-redux-starter-kit

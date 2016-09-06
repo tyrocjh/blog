@@ -1,25 +1,43 @@
-import * as types from '../constants/ActionTypes';
+import {
+	REQUEST_COMMENT,
+	RECEIVE_COMMENT,
+	COMMENT_PAGE } from '../constants/ActionTypes';
 
-const initialState = {
-	isFetching: false,
-	datas: []
-};
-
-export default function comment(state=initialState, action) {
+export function commentPage(state=1, action) {
 	switch(action.type) {
-		
-		case types.REQUEST_COMMENT:
+		case COMMENT_PAGE:
+			return action.page;
+		default:
+			return state;
+	}
+}
+
+function comment(state = {
+	isFetching: false,
+	totalCount: 0,
+	datas: []
+}, action) {
+	switch(action.type) {
+		case REQUEST_COMMENT:
 			return Object.assign({}, state, {
 				isFetching: true
 			});
-
-		case types.RECEIVE_COMMENT:
+		case RECEIVE_COMMENT:
 			return Object.assign({}, state, {
 				isFetching: false,
 				datas: action.comment
 			});
-
 		default:
 			return state;
+	}
+}
+
+export function commentByPage(state={}, action) {
+	switch(action.type) {
+		case REQUEST_COMMENT:
+		case RECEIVE_COMMENT:
+			return Object.assign({}, state, {
+				[action.page]: comment(state[action.page], action);
+			});
 	}
 }
