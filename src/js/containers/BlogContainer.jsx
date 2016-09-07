@@ -28,13 +28,14 @@ class BlogContainer extends Component {
 }
 
 function mapStateToProps(state) {
-	const { blogs, blogTags, blogArticle, comment, modal } = state;
+	const { blogs, blogTags, blogArticle, commentPage, commentByPage, modal } = state;
 
 	return {
 		blogs,
 		blogTags,
 		blogArticle,
-		comment,
+		commentPage,
+		commentByPage,
 		modal
 	}
 }

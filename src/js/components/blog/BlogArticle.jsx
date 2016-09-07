@@ -22,7 +22,6 @@ export default class BlogArticle extends Component {
 	}
 
 	render() {
-		const { comment, modal, dispatch } = this.props;
 		const article = this.props.blogArticle.data;
 
 		return (
@@ -50,7 +49,7 @@ export default class BlogArticle extends Component {
 
 				<section className="comment-section">
 					<div className="container">
-						<Comment comment={comment} modal={modal} dispatch={dispatch}  />
+						<Comment {...this.props} />
 					</div>
 				</section>
 			</div>

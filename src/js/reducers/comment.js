@@ -33,11 +33,14 @@ function comment(state = {
 }
 
 export function commentByPage(state={}, action) {
+	console.info(action.page);
 	switch(action.type) {
 		case REQUEST_COMMENT:
 		case RECEIVE_COMMENT:
 			return Object.assign({}, state, {
-				[action.page]: comment(state[action.page], action);
+				[action.page]: comment(state[action.page], action)
 			});
+		default:
+			return state;
 	}
 }

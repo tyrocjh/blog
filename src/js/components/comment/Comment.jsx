@@ -11,12 +11,12 @@ export default class Comment extends Component {
 	}
 
 	render() {
-		const { comment, modal, dispatch } = this.props;
+		const { commentByPage, commentPage, modal, dispatch } = this.props;
 
 		return (
 			<div className="comment">
 				<CommentSendBox showModal={this.showModal} dispatch={dispatch} />
-				<CommentList showModal={this.showModal} comment={comment} dispatch={dispatch} />
+				<CommentList showModal={this.showModal} commentByPage={commentByPage} commentPage={commentPage} dispatch={dispatch} />
 				<Modal {...modal} dispatch={dispatch} />
 			</div>
 		)

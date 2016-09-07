@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
 
-import { fetchComment } from '../../actions/comment';
+import { fetchCommentIfNeeded } from '../../actions/comment';
 import CommentItem from './CommentItem';
 
 export default class CommentList extends Component {
 	constructor(props) {
 		super(props);
-		const { comment, dispatch } = this.props;
-		if(comment.datas.length === 0)
-			dispatch(fetchComment());
+		const { commentPage, dispatch } = this.props;
+		dispatch(fetchCommentIfNeeded(commentPage));
 	}
 
 	render() {
-		const { showModal, comment, dispatch } = this.props;
+		const { showModal, commentByPage, dispatch } = this.props;
 
-		let commentList = comment.datas.map((comment, index) => {
-			return <CommentItem key={index} showModal={showModal} comment={comment} dispatch={dispatch} />
+		let commentList = commentByPage.datas && commentByPage.datas.map((comment, index) => {
+			return <CommentItem key={index} {...this.props} />
 		});
 
 		return (

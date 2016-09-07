@@ -10,39 +10,36 @@ export function selectCommentPage(page) {
 	}
 }
 
-function requestComment() {
+function requestComment(page) {
 	return {
-		type: REQUEST_COMMENT
+		type: REQUEST_COMMENT,
+		page
 	}
 }
 
-function receiveComment(json) {
+function receiveComment(json, page) {
 	return {
 		type: RECEIVE_COMMENT,
+		page,
 		comment: json.datas
 	}
 }
 
-function fetchComment() {
+function fetchComment(page) {
 	return dispatch => {
 		dispatch(requestComment());
 		return (
 			fetch('/api/comment')
 				.then(response => response.json())
 				.then(json => {
-					dispatch(receiveComment(json))
+					dispatch(receiveComment(json, page))
 				})
 		)
 	}
 }
 
 function shouldFetchComment(state, page) {
-	console.info(state);
 	const comment = state.commentByPage[page];
-
-	if(comment.isFetching) {
-		return false;
-	}
 
 	if(!comment) {
 		return true;
