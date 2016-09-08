@@ -142,6 +142,11 @@
 
 	.comment-item {
 		padding: 15px;
+
+		&:hover {
+			background-color: #FAFAFA;
+		}
+
 		&:not(:last-child) {
 			border-bottom: 1px solid #EEE;
 		}

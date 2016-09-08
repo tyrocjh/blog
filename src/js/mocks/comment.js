@@ -2,6 +2,9 @@ import fetchMock from 'fetch-mock';
 
 fetchMock
   .mock('/api/comment', {
+    'totalCount': 123,
+    'pageCount': 13,
+    'pageRange': 3,
 		'datas': [
       {
           "content": "@夕风色&#160;d",

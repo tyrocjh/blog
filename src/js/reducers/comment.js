@@ -15,6 +15,8 @@ export function commentPage(state=1, action) {
 function comment(state = {
 	isFetching: false,
 	totalCount: 0,
+	pageCount: 0,
+	pageRange: 0,
 	datas: []
 }, action) {
 	switch(action.type) {

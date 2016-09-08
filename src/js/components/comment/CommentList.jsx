@@ -11,10 +11,10 @@ export default class CommentList extends Component {
 	}
 
 	render() {
-		const { showModal, commentByPage, dispatch } = this.props;
+		const { showModal, commentPage, commentByPage, dispatch } = this.props;
 
-		let commentList = commentByPage.datas && commentByPage.datas.map((comment, index) => {
-			return <CommentItem key={index} {...this.props} />
+		let commentList = commentByPage[commentPage] && commentByPage[commentPage].datas.map((comment, index) => {
+			return <CommentItem key={index} showModal={showModal} comment={comment} dispatch={dispatch} />
 		});
 
 		return (
