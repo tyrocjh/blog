@@ -1,27 +1,32 @@
 import {
-	REQUEST_COMMENT,
-	RECEIVE_COMMENT,
-	COMMENT_PAGE } from '../constants/ActionTypes';
+	REQUEST_COMMENT, RECEIVE_COMMENT,
+	SELECT_PAGE, RECEIVE_PAGE } from '../constants/ActionTypes';
 
-export function selectCommentPage(page) {
+export function selectPage(page) {
 	return {
-		type: COMMENT_PAGE,
+		type: SELECT_PAGE,
 		page
 	}
 }
 
-function requestComment(page) {
+function receivePage(page) {
 	return {
-		type: REQUEST_COMMENT,
+		type: RECEIVE_PAGE,
 		page
 	}
 }
 
-function receiveComment(json, page) {
+function requestComment() {
 	return {
-		type: RECEIVE_COMMENT,
+		type: REQUEST_COMMENT
+	}
+}
+
+function receiveComment(comment, page) {
+	return {
+		type: RECEIVE_COMMENT, 
 		page,
-		comment: json.datas
+		comment: comment
 	}
 }
 
@@ -32,7 +37,8 @@ function fetchComment(page) {
 			fetch('/api/comment')
 				.then(response => response.json())
 				.then(json => {
-					dispatch(receiveComment(json, page))
+					dispatch(receiveComment(json.datas, page));
+					dispatch(receivePage(json.page));
 				})
 		)
 	}

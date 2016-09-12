@@ -12,13 +12,13 @@ export default class Comment extends Component {
 	}
 
 	render() {
-		const { commentByPage, commentPage, modal, dispatch } = this.props;
+		const { commentByPage, pagination, modal, dispatch } = this.props;
 
 		return (
 			<div className="comment">
 				<CommentSendBox showModal={this.showModal} dispatch={dispatch} />
-				<CommentList showModal={this.showModal} commentByPage={commentByPage} commentPage={commentPage} dispatch={dispatch} />
-				<Pagination {...this.props} path={'/'} queryParams='' />
+				<CommentList showModal={this.showModal} commentByPage={commentByPage} pagination={pagination} dispatch={dispatch} />
+				<Pagination {...pagination} path={'/'} queryParams='' />
 				<Modal {...modal} dispatch={dispatch} />
 			</div>
 		)

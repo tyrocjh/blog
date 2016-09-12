@@ -6,14 +6,14 @@ import CommentItem from './CommentItem';
 export default class CommentList extends Component {
 	constructor(props) {
 		super(props);
-		const { commentPage, dispatch } = this.props;
-		dispatch(fetchCommentIfNeeded(commentPage));
+		const { pagination, dispatch } = this.props;
+		dispatch(fetchCommentIfNeeded(pagination.currentPage));
 	}
 
 	render() {
-		const { showModal, commentPage, commentByPage, dispatch } = this.props;
+		const { showModal, pagination, commentByPage, dispatch } = this.props;
 
-		let commentList = commentByPage[commentPage] && commentByPage[commentPage].datas.map((comment, index) => {
+		let commentList = commentByPage[pagination.currentPage] && commentByPage[pagination.currentPage].datas.map((comment, index) => {
 			return <CommentItem key={index} showModal={showModal} comment={comment} dispatch={dispatch} />
 		});
 

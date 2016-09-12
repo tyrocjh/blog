@@ -1,11 +1,19 @@
 import {
-	REQUEST_COMMENT,
-	RECEIVE_COMMENT,
-	COMMENT_PAGE } from '../constants/ActionTypes';
+	REQUEST_COMMENT, RECEIVE_COMMENT,
+	SELECT_PAGE, RECEIVE_PAGE } from '../constants/ActionTypes';
 
-export function commentPage(state=1, action) {
+export function pagination(state = {
+	currentPage: 1,
+	totalCount: 0,
+	pageCount: 0,
+	pageRange: 0,
+}, action) {
 	switch(action.type) {
-		case COMMENT_PAGE:
+		case SELECT_PAGE:
+			return Object.assign({}, state, {
+				currentPage: action.page.currentPage
+			});
+		case RECEIVE_PAGE:
 			return action.page;
 		default:
 			return state;
@@ -14,9 +22,6 @@ export function commentPage(state=1, action) {
 
 function comment(state = {
 	isFetching: false,
-	totalCount: 0,
-	pageCount: 0,
-	pageRange: 0,
 	datas: []
 }, action) {
 	switch(action.type) {

@@ -1,0 +1,41 @@
+@import './variable';
+
+.pagination {
+  background-color: $white;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 0;
+
+  a, span {
+  	font-size: 14px;
+  	display: inline-block;
+    width: 42px;
+    text-align: center;
+    float: left;
+
+  	&:hover {
+  		background-color: #eee;
+  		color: $black;
+  	}
+  }
+
+  a {
+  	color: #428bca;
+  }
+
+  .page-current {
+  	font-size: 22px;
+  	color: $white;
+  	background-color: #428BCA;
+
+  	&:hover {
+  		color: $white;
+  		background-color: #428BCA;
+  	}
+  }
+
+  .page-pre, .page-next {
+  	width: initial;
+  	padding: 0 15px;
+  }
+}

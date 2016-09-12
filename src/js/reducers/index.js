@@ -4,7 +4,7 @@ import blogs from './blogs';
 import blogTags from './blogTags';
 import blogArticle from './blogArticle';
 import friendship from './friendship';
-import { commentPage, commentByPage } from './comment';
+import { pagination, commentByPage } from './comment';
 import modal from './modal';
 
 const rootReducer = combineReducers({
@@ -13,7 +13,7 @@ const rootReducer = combineReducers({
 	blogTags,
 	blogArticle,
 	friendship,
-	commentPage,
+	pagination,
 	commentByPage,
 	modal
 });
