@@ -11,7 +11,7 @@ export function pagination(state = {
 	switch(action.type) {
 		case SELECT_PAGE:
 			return Object.assign({}, state, {
-				currentPage: action.page.currentPage
+				currentPage: action.page
 			});
 		case RECEIVE_PAGE:
 			return action.page;
@@ -40,7 +40,6 @@ function comment(state = {
 }
 
 export function commentByPage(state={}, action) {
-	console.info(action.page);
 	switch(action.type) {
 		case REQUEST_COMMENT:
 		case RECEIVE_COMMENT:

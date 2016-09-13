@@ -2,7 +2,7 @@ import {
 	REQUEST_COMMENT, RECEIVE_COMMENT,
 	SELECT_PAGE, RECEIVE_PAGE } from '../constants/ActionTypes';
 
-export function selectPage(page) {
+function selectPage(page) {
 	return {
 		type: SELECT_PAGE,
 		page
@@ -58,6 +58,8 @@ export function fetchCommentIfNeeded(page) {
 	return (dispatch, getState) => {
 		if(shouldFetchComment(getState(), page)) {
 			return dispatch(fetchComment(page));
+		} else {
+			return dispatch(selectPage(page));
 		}
 	};
 }

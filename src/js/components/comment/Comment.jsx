@@ -4,9 +4,14 @@ import CommentSendBox from './CommentSendBox';
 import CommentList from './CommentList';
 import Pagination from '../Pagination';
 import Modal from '../modal/Modal';
+import { fetchCommentIfNeeded } from '../../actions/comment';
 import { showModal } from '../../actions/modal';
 
 export default class Comment extends Component {
+	changePage(dispatch, page) {
+		dispatch(fetchCommentIfNeeded(page));
+	}
+
 	showModal(dispatch, action) {
 		dispatch(action);
 	}
@@ -18,7 +23,7 @@ export default class Comment extends Component {
 			<div className="comment">
 				<CommentSendBox showModal={this.showModal} dispatch={dispatch} />
 				<CommentList showModal={this.showModal} commentByPage={commentByPage} pagination={pagination} dispatch={dispatch} />
-				<Pagination {...pagination} path={'/'} queryParams='' />
+				<Pagination {...pagination} changePage={this.changePage} dispatch={dispatch} queryParams='' />
 				<Modal {...modal} dispatch={dispatch} />
 			</div>
 		)

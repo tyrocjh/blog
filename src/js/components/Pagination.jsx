@@ -1,41 +1,46 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 
 export default class Pagination extends Component {
+	changePage(page) {
+		const { dispatch } = this.props;
+		this.props.changePage(dispatch, page);
+	}
+
 	render() {
 		const { currentPage, totalCount, pageCount, pageRange } = this.props;
 
 		let pagination = [],
-				path = this.props.path,
 				queryParams = this.props.queryParams,
-				preCount = (currentPage - pageRange > 0) ? (currentPage - pageRange) : 1,
+				extraMin = (pageCount - currentPage) < 3 ? pageRange - (pageCount - currentPage) : 0,
+				preCount = (currentPage - pageRange - extraMin) > 0 ? (currentPage - pageRange - extraMin) : 1,
 				nextCount = currentPage + 1,
-				maxCount = (currentPage + pageRange > pageCount) ? pageCount : currentPage + pageRange;
+				extraMax = pageRange > (currentPage - 1) ? pageRange - (currentPage - 1) : 0,
+				maxCount = (currentPage + pageRange + extraMax > pageCount) ? pageCount : currentPage + pageRange + extraMax;
 
 		if(totalCount > 0) {
 
 			if(currentPage === 1) {
 				pagination.push(<span key="page-pre" className="page-pre">上一页</span>);
 			} else {
-				pagination.push(<Link key="page-pre" className="page-pre" to={path} query={Object.assign({}, queryParams, {page: currentPage - 1})}>上一页</Link>);
+				pagination.push(<a href="javascript:void(0);" key="page-pre" className="page-pre" onClick={this.changePage.bind(this, currentPage - 1)}>上一页</a>);
 			}
 
 			while(preCount < currentPage) {
-				pagination.push(<Link key={preCount} to={path} query={Object.assign({}, queryParams, {page: preCount})}>{preCount}</Link>);
+				pagination.push(<a href="javascript:void(0);" key={preCount} onClick={this.changePage.bind(this, preCount)}>{preCount}</a>);
 				preCount++;
 			}
 
 			pagination.push(<span key={currentPage} className="page-current">{currentPage}</span>);
 
 			while(nextCount <= maxCount) {
-				pagination.push(<Link key={nextCount} to={path} query={Object.assign({}, queryParams, {page: nextCount})}>{nextCount}</Link>);
+				pagination.push(<a href="javascript:void(0);" key={nextCount} onClick={this.changePage.bind(this, nextCount)}>{nextCount}</a>);
 				nextCount++;
 			}
 
 			if(currentPage === pageCount) {
 				pagination.push(<span key="page-next" className="page-next">下一页</span>);
 			} else {
-				pagination.push(<Link key="page-next" className="page-next" to={path} query={Object.assign({}, queryParams, {page: currentPage + 1})}>下一页</Link>);
+				pagination.push(<a href="javascript:void(0);" key="page-next" className="page-next" onClick={this.changePage.bind(this, currentPage + 1)}>下一页</a>);
 			}
 
 		}

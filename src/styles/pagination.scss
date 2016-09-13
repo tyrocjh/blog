@@ -23,6 +23,14 @@
   	color: #428bca;
   }
 
+  span {
+    cursor: default;
+
+    &.page-pre, &.page-next {
+      color: #bbb;
+    }
+  }
+
   .page-current {
   	font-size: 22px;
   	color: $white;
