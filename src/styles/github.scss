@@ -1,0 +1,86 @@
+@import './variable';
+
+.github-info {
+	margin-bottom: 18px;
+	border: 1px solid #E6DADA;
+
+	>header {
+		height: 110px;
+		position: relative;
+		background-color: #555;
+
+		>i {
+	    font-size: 30px;
+	    transform: scale(4);
+	    position: absolute;
+	    margin: auto;
+	    left: 0;
+	    right: 0;
+	    bottom: 6px;
+	    width: 28px;
+		}
+
+		img {
+	    width: 85px;
+	    height: 85px;
+	    border-radius: 50%;
+	    border: 5px solid white;
+	    position: absolute;
+	    margin: auto;
+	    left: 0;
+	    right: 0;
+	    bottom: -45px;
+	    z-index: 10;
+		}
+	}
+
+	>section {
+		background-color: $white;
+		position: relative;
+		text-align: center;
+    padding-top: 58px;
+
+    >h3 {
+    	font-size: 18px;
+    }
+
+    >a {
+    	>i {
+    		padding-right: 4px;
+    	}
+
+	    background-color: #F97632;
+	    color: white;
+	    padding: 7px 12px;
+	    display: inline-block;
+	    border-radius: 4px;
+	    margin: 10px 0 14px;
+    }
+	}
+
+	>footer {
+		background-color: $white;
+    text-align: center;
+    border-top: 1px solid #eee;
+		
+		>a {
+			display: inline-block;
+			float: left;
+			padding: 5px 0 6px;
+
+			&:hover {
+				background-color: #fafafa;
+			}
+
+			strong {
+				font-size: 20px;
+				color: #333;
+			}
+
+			p {
+				font-size: 12px;
+				color: #aaa;
+			}
+		}
+	}
+}

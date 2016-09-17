@@ -1,6 +1,37 @@
 @import './variable';
 @import './mixin';
 
+.comment-page {
+	> header {
+		background: url('../images/comment-bg.jpg') center;
+		background-size: cover;
+		height: 373px;
+		padding-bottom: 60px;
+
+		.msg {
+			font-size: 48px;
+	    color: white;
+	    text-align: center;
+	    padding: 60px 0 40px;
+
+	    i {
+				font-size: 52px;
+		    padding-right: 10px;
+	    }
+		}
+	}
+
+	.comment-section {
+		padding-top: 20px;
+		background: #f4f4f4 url('../images/mask.png') center;
+
+		.comment-list {
+			margin-top: 0;
+			border: 1px solid #E6DADA;
+		}
+	}
+}
+
 .comment-send-box {
 	padding: 20px 20px 20px 80px;
 	position: relative;
@@ -177,6 +208,33 @@
 				&:hover {
 					color: #333;
 				}
+			}
+
+			.name {
+				color: #333;
+			}
+		}
+	}
+
+	.comment-slide {
+		padding: 8px;
+
+		.user img {
+			width: 40px;
+    	height: 40px;
+	    border-radius: 50%;
+		}
+
+		.info {
+			margin-left: 50px;
+
+			p {
+				color: #aaa;
+				margin: 4px 0;
+			}
+
+			.name {
+				word-break: break-all;
 			}
 		}
 	}

@@ -1,14 +1,14 @@
-import * as types from '../constants/ActionTypes';
+import { REQUEST_BLOGARTICLE, RECEIVE_BLOGARTICLE } from '../constants/ActionTypes';
 
 function requestBlogArticle() {
 	return {
-		type: types.REQUEST_BLOGARTICLE
+		type: REQUEST_BLOGARTICLE
 	}
 }
 
 function receiveBlogArticle(json) {
 	return {
-		type: types.RECEIVE_BLOGARTICLE,
+		type: RECEIVE_BLOGARTICLE,
 		blogArticle: json.data
 	}
 }

@@ -12,21 +12,30 @@ export default class CommentItem extends Component {
 	}
 
 	render() {
-		let { comment, dispatch } = this.props;
+		const { slide, comment, dispatch } = this.props;
+		
+		let showSlideTime = !slide ? '' : (
+			<span>{moment(parseInt(comment.time)).format('hh:mm MM-DD')}</span>
+		)
+
+		let showItemFoot = slide ? '' : (
+			<div className="footer">
+				<span>{moment(parseInt(comment.time)).format('hh:mm YYYY-MM-DD')}</span>
+				<a href="javascript:void(0);" onClick={this.handleClick.bind(this, dispatch, comment.user.username)}>回复</a>
+			</div>
+		)
 
 		return (
-			<div className="comment-item">
+			<div className={`comment-item ${slide ? 'comment-slide' : ''}`}>
 				<div className="user">
 					<img src={`${comment.user.avatar ? comment.user.avatar : '/images/default.jpg'}`} />
 				</div>
 
 				<div className="info">
-					<span>{comment.user.username}</span>
+					<span className="name">{comment.user.username}</span>
+					{showSlideTime}
 					<p>{comment.content}</p>
-					<div className="footer">
-						<span>{moment(parseInt(comment.time)).format('hh:mm YYYY-MM-DD')}</span>
-						<a href="javascript:void(0);" onClick={this.handleClick.bind(this, dispatch, comment.user.username)}>回复</a>
-					</div>
+					{showItemFoot}
 				</div>
 			</div>
 		)

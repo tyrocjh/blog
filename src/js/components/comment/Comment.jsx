@@ -5,7 +5,6 @@ import CommentList from './CommentList';
 import Pagination from '../Pagination';
 import Modal from '../modal/Modal';
 import { fetchCommentIfNeeded } from '../../actions/comment';
-import { showModal } from '../../actions/modal';
 
 export default class Comment extends Component {
 	changePage(dispatch, page) {

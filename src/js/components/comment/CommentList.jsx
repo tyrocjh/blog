@@ -11,14 +11,21 @@ export default class CommentList extends Component {
 	}
 
 	render() {
-		const { showModal, pagination, commentByPage, dispatch } = this.props;
+		const { slide, showModal, pagination, commentByPage, dispatch } = this.props;
+
+		let newestComment = !slide ? '' : (
+			<div className="comment-item comment-slide">
+				<strong>最新评论</strong>
+			</div>
+		)
 
 		let commentList = commentByPage[pagination.currentPage] && commentByPage[pagination.currentPage].datas.map((comment, index) => {
-			return <CommentItem key={index} showModal={showModal} comment={comment} dispatch={dispatch} />
+			return <CommentItem key={index} slide={slide} showModal={showModal} comment={comment} dispatch={dispatch} />
 		});
 
 		return (
 			<div className="comment-list">
+				{newestComment}
 				{commentList}
 			</div>
 		)

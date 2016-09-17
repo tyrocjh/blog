@@ -1,4 +1,4 @@
-import * as types from '../constants/ActionTypes';
+import { REQUEST_BLOGARTICLE, RECEIVE_BLOGARTICLE } from '../constants/ActionTypes';
 
 const initialState = {
 	isFetching: false,
@@ -8,12 +8,12 @@ const initialState = {
 export default function blogArticle(state=initialState, action) {
 	switch(action.type) {
 
-		case types.REQUEST_BLOGARTICLE:
+		case REQUEST_BLOGARTICLE:
 			return Object.assign({}, state, {
 				isFetching: true
 			});
 
-		case types.RECEIVE_BLOGARTICLE:
+		case RECEIVE_BLOGARTICLE:
 			return Object.assign({}, state, {
 				isFetching: false,
 				data: action.blogArticle

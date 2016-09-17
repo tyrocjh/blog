@@ -1,0 +1,35 @@
+import fetchMock from 'fetch-mock';
+
+fetchMock
+  .mock('https://api.github.com/users/tyrocjh', {
+    login: "tyrocjh",
+    id: 12635692,
+    avatar_url: "https://avatars.githubusercontent.com/u/12635692?v=3",
+    gravatar_id: "",
+    url: "https://api.github.com/users/tyrocjh",
+    html_url: "https://github.com/tyrocjh",
+    followers_url: "https://api.github.com/users/tyrocjh/followers",
+    following_url: "https://api.github.com/users/tyrocjh/following{/other_user}",
+    gists_url: "https://api.github.com/users/tyrocjh/gists{/gist_id}",
+    starred_url: "https://api.github.com/users/tyrocjh/starred{/owner}{/repo}",
+    subscriptions_url: "https://api.github.com/users/tyrocjh/subscriptions",
+    organizations_url: "https://api.github.com/users/tyrocjh/orgs",
+    repos_url: "https://api.github.com/users/tyrocjh/repos",
+    events_url: "https://api.github.com/users/tyrocjh/events{/privacy}",
+    received_events_url: "https://api.github.com/users/tyrocjh/received_events",
+    type: "User",
+    site_admin: false,
+    name: null,
+    company: null,
+    blog: null,
+    location: "Canton",
+    email: "nashcjh@163.com",
+    hireable: null,
+    bio: "Time waits for no one.",
+    public_repos: 4,
+    public_gists: 0,
+    followers: 0,
+    following: 0,
+    created_at: "2015-05-28T01:58:11Z",
+    updated_at: "2016-09-17T07:46:53Z"
+  });
