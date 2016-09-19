@@ -31,8 +31,8 @@ export default class BlogArticle extends Component {
 						<h1>{article.title}</h1>
 						<p>发布时间：{moment(parseInt(article.time_show)).format('YYYY-MM-DD')}</p>
 						<div className="share-btn">
-							<a href="javascript:void(0);" className="weibo"><i className="fa fa-weibo"></i></a>
-							<a href="javascript:void(0);" className="twitter"><i className="fa fa-twitter"></i></a>
+							<a href={`${'http://v.t.sina.com.cn/share/share.php?title='+article.title}`} title="分享至新浪微博" className="sina-weibo" target="_blank"><i className="fa fa-weibo"></i></a>
+							<a href={`${'http://v.t.qq.com/share/share.php?title='+article.title}`} title="分享至腾讯微博" className="tencent-weibo" target="_blank"><i className="fa fa-tencent-weibo"></i></a>
 						</div>
 					</div>
 				</header>

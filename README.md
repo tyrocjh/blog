@@ -15,10 +15,9 @@ Q:
 
 todo:
 1.mobile
-2.share button(article page)
-3.react-masonry-component source code
-4.emoji
-5.props type require
+2.react-masonry-component source code
+3.emoji
+4.props type require
 
 
 纯静态项目打包（cdn？）+react、nodejs后台项目
@@ -26,9 +25,3 @@ todo:
 
 redux reference:
 https://github.com/cloudmu/react-redux-starter-kit
-
-
-install:
-Window Resizer
-ColorPick Eyedropper
-Image Downloader

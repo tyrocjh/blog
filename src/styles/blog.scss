@@ -144,7 +144,7 @@
 
 .blog-article-page {
 	header {
-		background: url('../images/mask.png');
+		background: #f4f4f4 url('../images/mask.png');
 		text-align: center;
     padding: 80px 0 128px;
 
@@ -162,19 +162,21 @@
 
 		.share-btn {
 			a {
+				font-size: 19px;
 			  margin: 0 .5em;
     		border-radius: 2px;
     		width: 88px;
     		height: 32px;
+    		line-height: 32px;
     		display: inline-block;
+    		box-shadow: 0 1px 2px rgba(0,0,0,.2);
 			}
-			.weibo {
+			.sina-weibo {
+				color: $white;
 				background-color: $orange;
-				box-shadow: 0 1px 2px rgba(0,0,0,.1);
 			}
-			.twitter {
+			.tencent-weibo {
 				background-color: $white;
-				box-shadow: 0 1px 2px rgba(0,0,0,.1);
 			}
 		}
 	}
