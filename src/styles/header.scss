@@ -32,11 +32,63 @@
 			}
 		}
 
-		> a {
+		.directories a {
 			float: right;
 			&:hover {
 				color: $orange;
 			}
+		}
+	}
+
+	.mobile-nav {
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+
+    >h1 {
+	    font-size: 20px;
+	    display: inline-block;
+
+	    i {
+	      margin-right: 8px;
+	    }
+    }
+
+    >a {
+			position: absolute;
+			font-size: 25px;
+	    top: 10px;
+	    right: 14px;
+	    display: inline-block;
+	    line-height: initial;
+    }
+	}
+
+	@media(max-width: 767px) {
+		nav {
+			ul {
+				text-align: center;
+
+				li {
+					a {
+						i {
+							margin: 0 15px;
+						}
+
+						span {
+							width: 16vw;
+					    display: inline-block;
+					    text-align: left;
+						}
+					}
+				}
+			}
+		}
+
+		.mobile-directories {
+			border-top: 1px solid #eee;
+	    text-align: center;
 		}
 	}
 }
