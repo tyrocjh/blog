@@ -10,7 +10,7 @@
   box-shadow: 0 0 5px rgba(0,0,0,.4);
 
 	nav {
-		ul {
+		>ul {
 			float: left;
 			margin-bottom: 0;
 
@@ -32,7 +32,7 @@
 			}
 		}
 
-		.directories a {
+		>a {
 			float: right;
 			&:hover {
 				color: $orange;
@@ -67,10 +67,12 @@
 
 	@media(max-width: 767px) {
 		nav {
-			ul {
+			>ul {
 				text-align: center;
+				width: 100%;
 
 				li {
+					width: 100%;
 					a {
 						i {
 							margin: 0 15px;
@@ -83,6 +85,9 @@
 						}
 					}
 				}
+			}
+			>a {
+				width: 100%;
 			}
 		}
 

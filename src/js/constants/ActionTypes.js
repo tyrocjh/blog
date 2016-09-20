@@ -24,3 +24,6 @@ export const RECEIVE_GITHUBINFO = 'RECEIVE_GITHUBINFO';
 
 export const SHOW_MODAL = 'SHOW_MODAL';
 export const HIDE_MODAL = 'HIDE_MODAL';
+
+export const SHOW_MASK = 'SHOW_MASK';
+export const HIDE_MASK = 'HIDE_MASK';

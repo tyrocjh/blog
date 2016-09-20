@@ -23,7 +23,7 @@ export default class Toolbar extends Component {
 		}
 	}
 
-	handleClick() {	
+	handleClick() {
 		window.scrollTo(0, 0);
 	}
 
