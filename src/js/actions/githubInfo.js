@@ -21,7 +21,6 @@ function fetchGithubInfo() {
 			fetch('https://api.github.com/users/tyrocjh')
 				.then(response => response.json())
 				.then(json => {
-					console.info(json);
 					dispatch(receiveGithubInfo(json));
 				})
 		)
@@ -30,7 +29,6 @@ function fetchGithubInfo() {
 
 function shouldFetchGithubInfo(state) {
 	const info = state.githubInfo.data;
-	console.info(info);
 
 	if(!info) {
 		return true;

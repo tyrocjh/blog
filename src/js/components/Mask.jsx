@@ -1,26 +1,13 @@
 import React, { Component } from 'react';
 
-// import { showMask, hideMask } from '../../actions/mask';
-
-export default class Mask extends Component() {
-	// showMask() {
-	// 	const { dispatch } = this.props;
-	// 	dispatch(showMask());
-	// }
-
-	// closeMask() {
-	// 	const { dispatch } = this.props;
-	// 	dispatch(hideMask());
-	// }
-
+export default class Mask extends Component {
 	render() {
-		return <div>asd</div>
-		// const { mask, dispatch } = this.props;
+		const { mask } = this.props;
 
-		// if(mask) {
-		// 	return <div class="mask"></div>
-		// } else {
-		// 	return null;
-		// }
+		if(mask) {
+			return <div className="mask"></div>
+		} else {
+			return null;
+		}
 	}
 }

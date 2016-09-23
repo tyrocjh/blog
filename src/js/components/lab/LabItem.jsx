@@ -9,7 +9,7 @@ export default class LabItem extends Component {
 		const { lab } = this.props;
 		
 		return (
-			<div className="lab-item col-lg-3 col-md-4 col-sm-6">
+			<div className="lab-item col-lg-3 col-md-4 col-sm-6 col-xs-12">
 				<a onClick={this.handleClick}>
 					<img src={lab.cover} />
 					<i className="fa fa-link"></i>

@@ -14,15 +14,10 @@ Question:
 3.webpack.config.prod.js
 
 todo:
-1.emoji
-2.props type require
+1.mobile
+2.page loading
+3.emoji
+4.props type require
 
 
 纯静态项目打包（cdn？）+react、nodejs后台项目
-
-
-beautiful mobile web design
-http://www.zuiku.com/web/showtemplate/view?categoryId=20&templateCatAdminId=64
-http://benthebodyguard.com/index.php
-http://www.webhek.com/misc-res/creativeguidebook/#
-http://devinasagar.com/

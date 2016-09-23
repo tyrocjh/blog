@@ -7,7 +7,6 @@ import githubInfo from './githubInfo';
 import friendship from './friendship';
 import { pagination, commentByPage } from './comment';
 import modal from './modal';
-import mask from './mask';
 
 const rootReducer = combineReducers({
 	labs,
@@ -18,8 +17,7 @@ const rootReducer = combineReducers({
 	pagination,
 	commentByPage,
 	githubInfo,
-	modal,
-	mask
+	modal
 });
 
 export default rootReducer;

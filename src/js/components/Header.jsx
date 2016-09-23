@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 
 import Mask from './Mask';
+import { isMobile } from '../utils/DeviceUtils';
 
 export default class Header extends Component {
 	constructor(props) {
 		super(props);
 		this.handleBodyClick = this.handleBodyClick.bind(this);
-		this.state = { showNav: window.innerWidth > 767 ? true : false };
+		this.state = { showNav: !isMobile };
 	}
 
 	componentDidMount() {
@@ -29,7 +30,10 @@ export default class Header extends Component {
 
 	handleHeaderClick(e) {
 		let parentLink = e.target.closest('a');
-		if(!(parentLink && parentLink.tagName === 'A'))
+		let isLink = parentLink && parentLink.tagName === 'A';
+		let isMask = e.target.className === 'mask';
+
+		if(!(isLink || isMask))
 			e.stopPropagation();
 	}
 
@@ -47,7 +51,6 @@ export default class Header extends Component {
 
 		return (
 			<header id="app-header" ref="appHeader">
-				<Mask {...this.props} />
 				<div className="mobile-nav visible-xs-block">
 					<h1><i className="fa fa-user"></i>小剧客栈</h1>
 					<a ref="switchIcon" href="javascript:void(0);"><i className={`fa ${showNav?'fa-close':'fa-bars'}`}></i></a>
@@ -64,6 +67,7 @@ export default class Header extends Component {
 				<div className="mobile-directories visible-xs-block">
 					<Link to="/directories" className={`${showNav?'':'hide'}`} target="_blank">前端英雄榜</Link>
 				</div>
+				<Mask mask={this.state.showNav && isMobile()} />
       </header>
 		)
 	}
