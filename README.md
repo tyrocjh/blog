@@ -14,14 +14,19 @@ Question:
 3.webpack.config.prod.js
 
 todo:
-1.mobile
-2.page loading
-3.emoji
-4.props type require
+1.webpack.prod -> server.js -> new branch
+2.develop admin use antd without mock
+3.develop api
+?.page loading
+?.emoji
+?.props type require
 
 
 纯静态项目打包（cdn？）+react、nodejs后台项目
 
+
+https://github.com/Justin-lu/react-redux-antd
+https://github.com/cloudmu/react-redux-starter-kit
 
 http://www.jb51.net/article/52990.htm
 https://my.oschina.net/u/1582119/blog/278524
