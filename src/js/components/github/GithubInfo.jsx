@@ -15,9 +15,9 @@ export default class extends Component {
 					<a href={githubInfo.html_url} target="_blank"><i className="fa fa-user"></i>Follow me</a>
 				</section>
 				<footer className="clearfix">
-					<a href={githubInfo.html_url} target="_blank" className="col-sm-4"><strong>{githubInfo.followers}</strong><p>Followers</p></a>
-					<a href={githubInfo.html_url} target="_blank" className="col-sm-4"><strong>{githubInfo.public_repos}</strong><p>Repos</p></a>
-					<a href={githubInfo.html_url} target="_blank" className="col-sm-4"><strong>{githubInfo.following}</strong><p>Following</p></a>
+					<a href={githubInfo.html_url} target="_blank" className="col-sm-4 col-xs-4"><strong>{githubInfo.followers}</strong><p>Followers</p></a>
+					<a href={githubInfo.html_url} target="_blank" className="col-sm-4 col-xs-4"><strong>{githubInfo.public_repos}</strong><p>Repos</p></a>
+					<a href={githubInfo.html_url} target="_blank" className="col-sm-4 col-xs-4"><strong>{githubInfo.following}</strong><p>Following</p></a>
 				</footer>
 			</div>
 		)

@@ -31,21 +31,25 @@ export default class CommentPage extends Component {
 				<header>
 					<div className="container">
 						<div className="msg"><i className="fa fa-comments-o"></i>说点啥</div>
-						<div className="col-sm-10 col-sm-offset-1">
-							<CommentSendBox showModal={this.showModal} dispatch={dispatch} />
+						<div className="row">
+							<div className="col-sm-10 col-sm-offset-1">
+								<CommentSendBox showModal={this.showModal} dispatch={dispatch} />
+							</div>
 						</div>
 					</div>
 				</header>
 
 				<section className="comment-section">
 					<div className="container">
-						<div className="col-sm-8">
-							<CommentList showModal={this.showModal} commentByPage={commentByPage} pagination={pagination} dispatch={dispatch} />
-							<Pagination {...pagination} changePage={this.changePage} dispatch={dispatch} queryParams='' />
-						</div>
-						<div className="col-sm-4">
-							<GithubInfo githubInfo={githubInfo} />
-							<CommentList slide={true} showModal={this.showModal} commentByPage={commentByPage} pagination={pagination} dispatch={dispatch} />
+						<div className="row">
+							<div className="col-sm-8">
+								<CommentList showModal={this.showModal} commentByPage={commentByPage} pagination={pagination} dispatch={dispatch} />
+								<Pagination {...pagination} changePage={this.changePage} dispatch={dispatch} queryParams='' />
+							</div>
+							<div className="col-sm-4">
+								<GithubInfo githubInfo={githubInfo} />
+								<CommentList slide={true} showModal={this.showModal} commentByPage={commentByPage} pagination={pagination} dispatch={dispatch} />
+							</div>
 						</div>
 					</div>
 				</section>

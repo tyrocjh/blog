@@ -46,4 +46,22 @@
   	width: initial;
   	padding: 0 15px;
   }
+
+  @media(max-width: 767px) {
+    text-align: center;
+    display: block;
+    background-color: initial;
+    
+    a, span {
+      display: none;
+
+      &.page-pre, &.page-next {
+        display: inline-block;
+        float: none;
+        background-color: white;
+        border-radius: 20px;
+        margin: 0 10px;
+      }
+    }
+  }
 }
