@@ -21,3 +21,8 @@ todo:
 
 
 纯静态项目打包（cdn？）+react、nodejs后台项目
+
+
+http://www.jb51.net/article/52990.htm
+https://my.oschina.net/u/1582119/blog/278524
+http://markbrownsword.com/2015/08/29/deployment-to-heroku
