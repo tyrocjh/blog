@@ -19,8 +19,16 @@ const plugins = [
     }
   ]),
   new webpack.NoErrorsPlugin(),
-  new ExtractTextPlugin('css/app.css', { allChunks: true }),
-  new HtmlWebpackPlugin()
+  new webpack.DefinePlugin({
+    'process.env.NODE_ENV': JSON.stringify('production'),
+    __DEV__: JSON.stringify(JSON.parse(process.env.DEBUG || 'false'))
+  }),
+  new webpack.optimize.UglifyJsPlugin({
+    compress: {
+      warnings: false
+    }
+  }),
+  new ExtractTextPlugin('css/app.css', { allChunks: true })
 ];
 
 module.exports = {
@@ -49,11 +57,11 @@ module.exports = {
       },
       {
         test: /\.(ttf|eot|svg|woff|woff2)/,
-        loader: 'url?limit=8192&name=fonts/[name].[ext]?[hash]'
-      }, 
+        loader: 'url?&name=fonts/[name].[ext]?[hash]'
+      },
       {
         test: /\.(png|jpg)$/,
-        loader: 'url?limit=250000&name=images/[name].[ext]?[hash]'
+        loader: 'url?&name=images/[name].[ext]?[hash]'
       }
     ]
   },

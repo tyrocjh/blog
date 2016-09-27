@@ -10,13 +10,11 @@ main.js -> import './mocks/*';
 
 Question:
 1.page-transition-leave无效果
-2.scss文件里面的background-image一定要被webpack转化为base64吗？不然编译报错？
-3.webpack.config.prod.js
+
 
 todo:
-1.webpack.prod -> server.js -> new branch
-2.develop admin use antd without mock
-3.develop api
+1.develop admin use antd without mock
+2.develop api
 ?.page loading
 ?.emoji
 ?.props type require
