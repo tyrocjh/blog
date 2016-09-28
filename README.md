@@ -1,4 +1,5 @@
 # blog-demo
+https://tyroccc.herokuapp.com/
 reference：http://bh-lay.com/
 
 tech:
@@ -13,7 +14,7 @@ Question:
 
 
 todo:
-1.develop admin use antd without mock
+1.develop admin use antd
 2.develop api
 ?.page loading
 ?.emoji
@@ -29,3 +30,11 @@ https://github.com/cloudmu/react-redux-starter-kit
 http://www.jb51.net/article/52990.htm
 https://my.oschina.net/u/1582119/blog/278524
 http://markbrownsword.com/2015/08/29/deployment-to-heroku
+
+
+*****************************************************
+editor:
+https://github.com/zenoamaro/react-quill
+react component:
+https://github.com/brillout/awesome-react-components
+*****************************************************
