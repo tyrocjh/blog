@@ -1,40 +1,26 @@
 # blog-demo
+
+live:
 https://tyroccc.herokuapp.com/
-reference：http://bh-lay.com/
+
+reference：
+http://bh-lay.com/
+
+how to use:
+1.npm install
+2.dev environment -> npm run webpack
+  prod environment -> npm run postinstall, npm start
 
 tech:
 bootstrap, es6, react, redux, sass, webpack
 
-dev -> prod:
-main.js -> import './mocks/*';
-
-
 Question:
-1.page-transition-leave无效果
-
+1.page-transition-leave not working
+2.whether to use cdn
 
 todo:
-1.develop admin use antd
-2.develop api
-?.page loading
-?.emoji
-?.props type require
-
-
-纯静态项目打包（cdn？）+react、nodejs后台项目
-
-
-https://github.com/Justin-lu/react-redux-antd
-https://github.com/cloudmu/react-redux-starter-kit
-
-http://www.jb51.net/article/52990.htm
-https://my.oschina.net/u/1582119/blog/278524
-http://markbrownsword.com/2015/08/29/deployment-to-heroku
-
-
-*****************************************************
-editor:
-https://github.com/zenoamaro/react-quill
-react component:
-https://github.com/brillout/awesome-react-components
-*****************************************************
+1.remove mocks[main.js -> import './mocks/*'] and update fetch[action]
+2.compress js and css file (whether to remove css map for prod env)
+3.page loading
+4.emoji
+5.props type require
